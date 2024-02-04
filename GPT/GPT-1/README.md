@@ -36,7 +36,8 @@ $h_l =$ transformer_block$(h_{l-1}) \ \forall i \in [1,n]$
 
 $P(u) = softmax(h_nW_e^T)$
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled.png)
+![image](https://github.com/jw9603/LM_review/assets/70795645/b976d49f-82d3-4d12-a06f-f02fb2d580f9)
+
 
 ### 2) Supervised fine-tuning
 
@@ -61,8 +62,8 @@ $L_2(C) = \sum_{(x,y)}logP(y|x^1,…, x^m)$
 ### Task-specific input transformations
 
 GPT는 최소한의 구조 변화로 Target task에 적용 가능한 언어 모델이다.
+![image](https://github.com/jw9603/LM_review/assets/70795645/687e0142-b28b-4c13-8b81-da1305ad790c)
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%201.png)
 
 1. Classification
 
@@ -86,23 +87,28 @@ BooksCorpus dataset을 통해 pre-training을 진행했다.
 
 저자들은 GPT를 통한 semi-supervised 방법의 효과를 증명하기 위해 Natural language inference, QA, sentence similarity, Classification의 다양한 benckmark dataset을 사용하여 실험을 진행했다.
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%202.png)
+![image](https://github.com/jw9603/LM_review/assets/70795645/884f7cb6-abe1-421f-8ede-a79942b61380)
+
 
 Natural language inference에서는 거의 대부분의 dataset에서 GPT가 큰 차이로 우수한 성능을 보였다. (3x)는 앙상블 모델을 의미한다.
 
 유일하게 저조한 성능을 보인 RTE dataset은 크기가 작은 데이터셋이다. 따라서 NLI task의 fine tuning은 상대적으로 데이터셋이 클수록 좋은 성능을 보임을 알 수 있다.
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%203.png)
+![image](https://github.com/jw9603/LM_review/assets/70795645/4cd8abc9-0a6e-4e86-9c0b-4ce52a90b1ea)
+
 
 두 번째 실험은 QA task에 대한 성능 비교이다.
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%204.png)
+![image](https://github.com/jw9603/LM_review/assets/70795645/af4cbfa7-baed-42bd-8ae1-ed3fe8afa717)
+
 
 세 번째 실험은 classification과 similarity task이다.
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%205.png)
+![image](https://github.com/jw9603/LM_review/assets/70795645/6ea849a4-11e9-4d46-a158-14334d223705)
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%206.png)
+
+![image](https://github.com/jw9603/LM_review/assets/70795645/b4a0f75d-17ec-4797-9f63-a87ce6de584e)
+
 
 왼쪽 그래프는 unsupervised pre-training에서 transformer layer 수에 따른 결과비교다.
 
@@ -114,7 +120,8 @@ layer 수에 따른 유의미한 성능 향상이 있음을 알 수 있다.
 
 특히 Zero-shot에 대한 LSTM 성능의 분산이 더 컸다는 결과를 통해, pre-training이 전반적인 일반화 능력을 제공한다는 것을 알 수 있다.
 
-![Untitled](GPT-1%20cc7a36342e7c4821b924e43e0e73327d/Untitled%207.png)
+![image](https://github.com/jw9603/LM_review/assets/70795645/3eb5f43f-9e50-4dae-b7c4-697e1f88d139)
+
 
 ### Conclusion
 
